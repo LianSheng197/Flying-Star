@@ -1,0 +1,123 @@
+html {
+    background: linear-gradient(-90deg, rgba(0, 0, 0, .025) 1px, transparent 1px), linear-gradient(rgba(0, 0, 0, .025) 1px, transparent 1px), linear-gradient(-90deg, rgba(0, 0, 0, .02) 1px, transparent 1px), linear-gradient(rgba(0, 0, 0, .02) 1px, transparent 1px), linear-gradient(transparent 3px, #f2f2f22f 3px, #f2f2f22f 78px, transparent 78px), linear-gradient(-90deg, #e4e4e466 1px, transparent 1px), linear-gradient(-90deg, transparent 3px, #f2f2f22f 3px, #f2f2f22f 78px, transparent 78px), linear-gradient(#e4e4e466 1px, transparent 1px), #e6e6e6;
+    background-size: 20px 20px, 20px 20px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px;
+}
+
+body {
+    width: 60%;
+    max-width: 800px;
+    margin: auto;
+}
+
+article {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+quote {
+    display: block;
+    width: calc(100% - 4rem);
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #00f1;
+    border-radius: 1rem;
+}
+
+code {
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    background-color: #000c;
+    color: #fff;
+}
+
+h3::after {
+    content: "】";
+}
+
+h3::before {
+    content: "【";
+}
+
+table.star {
+    font-size: 1.5rem;
+    margin: 1rem;
+    border: 2px solid #000;
+    border-collapse: collapse;
+}
+
+table.star td {
+    position: relative;
+    border: 1px solid #333;
+    padding: 1rem;
+    width: 100px;
+    height: 100px;
+}
+
+table.star .background {
+    position: absolute;
+    color: #9003;
+    font-size: 3rem;
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    z-index: -1;
+    overflow: hidden;
+ }
+
+table.star td div {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+table.star.small td {
+    width: 50px;
+    height: 50px;
+}
+
+/* color */
+.gray {
+    color: gray;
+}
+
+.purple {
+    color: purple;
+}
+
+.black {
+    color: black;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+/* color end */
+
+.inline-block {
+    display: inline-block;
+}
+
+#starTable {
+    /* border-collapse: collapse; */
+}
+
+#selectedDate {
+    padding-left: 1rem;
+    font-weight: bold;
+    color: #900;
+}

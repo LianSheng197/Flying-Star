@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九宮飛星計算</title>
+
+    
+    <link rel="stylesheet" href="src/main.css">
+</head>
+
+<body>
+    <article>
+        <h3>緒論</h3>
+        <p>
+            老師曾經在課堂上教我們根據日子看建築風水，但是對於日期的星位只有簡單帶過。<br>
+            我認爲這一定有公式，否則不可能被做成網頁供人查詢，因此嘗試去找相關資訊。<br>
+            不過由於<span style="color: red">坊間農民曆標準不一</span>，因此有可能有部分內容無法跟線上或是紙本的農民曆相呼應。<br>
+        </p>
+    </article>
+
+    <article>
+        <h3>參考</h3>
+        <ol>
+            <li><a href="https://www.facebook.com/1527909284186647/posts/2377874612523439/">妙玄開運 -
+                    九宮飛星每年、每月、每日、每時位置算法</a>
+            </li>
+            <li>
+                <a href="https://fate.windada.com/cgi-bin/calendar">萬年農民曆查詢</a><br>
+                註：這個網站的月日規則不明，與上文的公式有落差。<br>
+                　　不過老師教授的計算方式是查找農民曆，所以即便是人工查詢本來就有可能有落差。
+            </li>
+        </ol>
+    </article>
+
+
+    <article>
+        <h3>正文</h3>
+        <p>
+            九宮飛星計算分爲年月日時，這裡只取年月日。
+        </p>
+
+
+        <h4>計算每年入中宮的飛星的數字</h4>
+        <p>這裡只取 2000 年後的計算方式（原文沒有細說，但根據公式來看，估計是指 2000~2099 年）</p>
+        <p>
+            <quote>
+                9減年份後兩位相加，所得之餘數為九宮飛星入中宮之飛星的數字。<br>
+                如果年份後兩位相加大於9，則將所得之和的個位十位再相加，讓9去減，所得之餘數為九宮飛星入中宮之飛星的數字。<br>
+                如果餘數為零，可視為九，都為九紫星入中宮。<br>
+            </quote>
+            <br>
+            <b>舉例</b><br>
+            2009年，<code>9-(0+9)=0</code>，九紫星入中宮。<br>
+            2019年，<code>1+9=10, 9-(1+0)=8</code>，八白星入中宮。<br>
+
+            <table class="star small inline-block">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="purple">九紫</div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <table class="star small inline-block">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="gray">八白</div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </p>
+
+        <h4>計算每月入中宮的飛星的數字</h4>
+        <p>
+            <quote>
+                歌訣：子午卯酉八白起，寅申巳亥二黑求，辰戌丑未五黃中。<br>
+                這三句歌訣的意思是：<br>
+                凡是子午卯酉年的正月為8（八白星入中宮）、二月為7、三月為6，以此類推。<br>
+                寅申巳亥年的正月為2（二黑星入中宮）、二月為1、三月為9，以此類推。<br>
+                辰戌丑未年的正月為5（五黃星入中宮）、二月為4、三月為3，以此類推。<br>
+            </quote>
+
+            月份的飛星示意圖省略。繪製流程與年份相同。
+        </p>
+
+        <h4>計算每日入中宮的飛星的數字</h4>
+        <p>
+            <quote>
+                口訣：冬至，雨水及穀雨，陽順一七四中游，夏至、處暑、霜降後，九三六星逆行求。<br>
+                這兩句歌訣的意思是：<br>
+                冬至，雨水及穀雨後的第一個甲子日，分別自九宮飛星的一七四入中宮開始順排，飛星也順飛，即：<br>
+                冬至後的第一個甲子日為一白、乙丑日為二黑、丙寅日為三碧，以此類推。<br>
+                雨水後的第一個甲子日為七赤、乙丑日為八白、丙寅日為九紫，以此類推。<br>
+                穀雨後的第一個甲子日為四碧、乙丑日為五黃、丙寅日為六白，以此類推。<br>
+                夏至、處暑、霜降後第一個甲子日，分別自九宮飛星的九三六開始逆排，飛星也逆飛，即：<br>
+                夏至後的第一個甲子日為九紫、乙丑日為八白，丙寅日為七赤，以此類推。<br>
+                處暑後的第一個甲子日為三碧、乙丑日為二黑，丙寅日為一白，以此類推。<br>
+                霜降後的第一個甲子日為六白、乙丑日為五黃，丙寅日為四綠，以此類推。<br>
+            </quote>
+        </p>
+    </article>
+
+    <article>
+        爲了方便查詢，我做了一個小工具。
+
+        <h4>自動計算九宮飛星與建築方位</h4>
+        <p>爲求簡化，僅支援 2000~2049 年的查詢</p>
+        
+        <span>選擇日期（國曆）：</span>
+        <input type="date" id="date" step="1" min="2000-01-01" max="2049-12-31">
+        <span id="selectedDate"></span>
+
+        <table class="star" id="starTable">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h4>參考</h4>
+        <ol>
+            <li>
+                <a href="https://ytliu0.github.io/ChineseCalendar/sunMoon_chinese.html">月相和二十四節氣時刻</a>
+            </li>
+            <li>
+                <a href="https://ytliu0.github.io/ChineseCalendar/Julian_chinese.html">儒略日數和日干支計算器</a>
+            </li>
+            <li>
+                <a href="https://ytliu0.github.io/ChineseCalendar/docs/sunMoon_chinese.pdf">月相和二十四節氣的計算（論文）</a>
+            </li>
+        </ol>
+    </article>
+
+    <article>
+        <h4>最後的筆記</h4>
+        <p>
+            做到最後才發現原來九宮飛星的編排規則跟<a href="https://zh.wikipedia.org/wiki/%E5%B9%BB%E6%96%B9">幻方</a>不同，這點需特別留意... <br>
+            由於大部分教學的範例圖都是以五居中，因此很容易在第一印象時就誤會了。<br>
+            （不過如果先前不知道幻方的話，應該就沒有這個困擾）
+        </p>
+    </article>
+
+    <script src="src/main.js"></script>
+</body>
+
+</html>
